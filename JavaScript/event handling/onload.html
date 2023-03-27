@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var second = 0;
+
+    function startTimer() {
+        window.setInterval("updateTime()", 1000);
+    }
+
+    function updateTime() {
+        ++second;
+        document.getElementById("sofar").innerHTML = second;
+    }
+</script>
+
+<body onload="startTimer()">
+
+    <p>Second you have spent viewing this page</p>
+    <strong id="sofar">0 seconds</strong>
+</body>
+
+</html>

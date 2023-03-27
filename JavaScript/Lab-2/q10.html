@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question10</title>
+</head>
+
+<body>
+    <form action="" name="frm">
+        Username: <input type="text" name="username"><br> Password: <input type="password" name="password"><br> Phone: <input type="number" name="phone"><br>
+        <select name="opt" id="">
+            <option value="1">Select one option</option>
+            <option value="2">BCA</option>
+        </select> <br>
+        <label for="">Gender</label>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <input type="radio" name="gender" value="Others">Others <br>
+
+        <label for="">Language:</label>
+        <input type="checkbox" name="language" value="Nepali">Nepali
+        <input type="checkbox" name="language" value="English">English
+        <input type="checkbox" name="language" value="French">French <br> Date of Birth: <input type="text" name="dob"><br>
+
+        <input type="submit" name="submit" onclick="display()">
+    </form>
+
+    <script>
+        function display() {
+
+            var name = document.frm.username.value;
+            var pass = document.frm.password.value;
+            var phone = document.frm.phone.value;
+            var opt = document.frm.opt.value;
+            var genderarray = document.frm.gender;
+            var language = document.getElementsByName("language");
+            var dob = document.frm.dob.value;
+
+
+            var status = "";
+
+            // Name validation
+            var checKName = /^[a-zA-Z ]+$/;
+            if (!name.match(checKName)) {
+                alert("Enter name correctly");
+                return false;
+            }
+            if (pass == "" || pass.length < 8) {
+                alert("Password cannot be empty");
+                return false;
+            }
+            //Phone validation
+            var checkPhone = /^01[0-9]{6}$/;
+            if (!phone.match(checkPhone)) { //[0-9] or \d for regular expression
+                alert("Enter phone number correctly");
+                return false;
+            }
+            if (opt == 1) {
+                alert("Please select a option");
+                return false;
+            }
+            //validation for radio buttons
+            for (var i = 0; i < genderarray.length; i++) {
+                if (genderarray[i].checked) {
+                    gendercheck = genderarray[i].value;
+                    break;
+                }
+            }
+            if (i == genderarray.length) {
+                alert("No radio button is checked.");
+                return false;
+            }
+            //validate checkbox
+
+
+            for (var index = 0; index < language.length; index++) {
+                status = status + language[index].value + "-" + language[index].checked + "<br>";
+            }
+            //validation for dob
+            var checkDate = /^(\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-4])$/;
+            if (!dob.match(checkDate)) {
+                alert("Invalid");
+                return false;
+            }
+
+            return (document.write("Name: " + name + "<br>" + "Password: " + pass + "<br>" +
+                "Phone: " + phone + "<br>" + "Option: " + opt + "<br>" + "Gender: " + gendercheck + "<br>" +
+                "Lamguage: " + status + "<br>" + "Date Of Birth: " + dob + "<br>"));
+        }
+    </script>
+</body>
+
+</html>

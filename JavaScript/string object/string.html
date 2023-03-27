@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = new String();
+        str = "hello bca fourth you are studying scripting language ";
+        document.write("length : " + str.length + "<br>");
+        document.write("charAt : " + str.charAt(8) + "<br>");
+        document.write("charCodeAt : " + str.charCodeAt(8) + "<br>");
+
+        var str1 = "please locate where the 'locate' occurs";
+        document.write("indexOf : " + str1.indexOf("locate") + "<br>");
+        document.write("concat : " + str.concat("-", str1) + "<br>"); //here separator is optional
+        document.write("lastIndexOf : " + str1.lastIndexOf('locate') + "<br>");
+        document.write("search : " + str1.search('the') + "<br>"); //here we can pass regular expression also
+        document.write("slice : " + str1.slice(7, 20) + "<br>"); //it slice string in sub string starting with start index and end with end index also it doesnot incluce the last character,
+        //the end index becomes the endIndex-1
+        document.write("substring : " + str1.substring(7, 20) + "<br>");
+        var str2 = "hello bca fourth you are students of bca fourth";
+        document.write("replace : " + str2.replace("fourth", "program") + "<br>"); //if two same string are found then it will only replace the
+        //first value only
+        document.write("toUpperCase : " + str2.toUpperCase() + "<br>");
+        document.write("toLowerCase : " + str2.toLowerCase() + "<br>");
+        document.write("trim : " + str.trim() + "<br>"); //remomve space from left and right hand side
+        document.write("split : " + str.split() + "<br>"); //converts array into string
+    </script>
+</body>
+
+</html>

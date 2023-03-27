@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <script type="text/javascript">
+        //This is single line comment
+        /*This is multi-line comment*/
+    </script>
+</head>
+
+<body>
+    <!-- embedding javascript using external js -->
+    <script type="text/javascript" src="./myjs.js">
+        //This is single line comment
+    </script>
+
+
+    <noscript>
+        <!-- noscript code are not shown in the browser -->
+        <h2>No javascript code enabled</h2>
+    </noscript>
+    <!-- embedding javascript using url -->
+    <a href="javascript:new Date().toLocaleTimeString();">What time is it?</a>
+    <h1>For comment</h1>
+
+
+    <script>
+        var a = 10;
+        var b = "10";
+        // it (===) checks data types and values
+        // (==) it checks only values
+        if (a === b) {
+            document.write("same");
+        } else {
+            document.write("Different");
+        }
+    </script>
+</body>
+
+</html>

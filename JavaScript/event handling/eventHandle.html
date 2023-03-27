@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #inline,
+        #traditional {
+            border: 1px solid blueviolet;
+            padding: 14px;
+            margin: 10px;
+            background-color: rgb(210, 96, 76);
+            width: fit-content;
+        }
+    </style>
+</head>
+<script>
+    function handleEvent() {
+        alert("The event was successfully handled.");
+    }
+
+    function registerHandler() {
+        var traditional = document.getElementById("traditional");
+        handleEvent();
+    } //end function registerHandler
+</script>
+
+<body onload="registerHandler()">
+
+    <div id="inline" onclick="handleEvent()">Inline Registration Model</div>
+    <div id="traditional">Traditional Registration Model</div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="frm">
+        1st Number: <input type="text" name="numOne">
+        <br> 2nd Number: <input type="text" name="numTwo">
+        <input type="submit" type="submit" value="Multiply" onclick="Multiply()">
+        <input type="submit" type="submit" value="Divide" onclick="Divide()">
+    </form>
+    <script type="text/javascript">
+        function Multiply() {
+            var FirstNum = document.frm.numOne.value;
+            var SecondNum = document.frm.numTwo.value;
+            var multi = parseInt(FirstNum) * parseInt(SecondNum);
+            alert("The result is:" + multi);
+        }
+
+
+        function Divide() {
+            var FirstNum = document.frm.numOne.value;
+            var SecondNum = document.frm.numTwo.value;
+            var divide = parseInt(FirstNum) / parseInt(SecondNum);
+            alert("The result is:" + divide);
+        }
+    </script>
+</body>
+
+</html>

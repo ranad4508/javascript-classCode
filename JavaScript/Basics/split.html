@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //split() method splits a string object into an array of string by separating the 
+        var name = "s-i-k-h-a";
+        document.write(name.split('-')); //if no separatoe then the comma default separate the string
+    </script>
+
+
+    <!-- wap in js to find whether the given string is palindrome or not -->
+    <script>
+        var palName = "lol";
+        var Name = palName.split('').reverse().join('');
+        if (palName == Name) {
+            document.write("The string is palindrome");
+        } else {
+            document.write("String is not palindrome");
+        }
+    </script>
+</body>
+
+</html>

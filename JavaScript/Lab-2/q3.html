@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="frm">
+        Enter principal:
+        <input type="text" name="principal"><br> Enter rate:
+        <input type="text" name="rate"><br> Enter time:
+        <input type="text" name="time"><br>
+        <input type="submit" value="Calculate" onclick="simpleInterest()">
+    </form>
+    <script>
+        function simpleInterest() {
+            var p = document.frm.principal.value;
+            var t = document.frm.rate.value;
+            var r = document.frm.time.value;
+
+            var si = (parseInt(p * r * t)) / 100;
+            document.write("Simple interest is : " + si);
+        }
+    </script>
+</body>
+
+</html>

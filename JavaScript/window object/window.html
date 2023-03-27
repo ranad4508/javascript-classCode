@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window object and it methods or properties</title>
+</head>
+
+<body>
+    <button onclick="windowOpen()">Click To open window</button>
+    <button onclick="promptMethod()">Click to take input from user</button>
+    <button onclick="closeWindow()">Click to close the window</button>
+    <button onclick="myFunction()">Click to see opener property</button>
+
+    <script>
+        var myWindow;
+
+        function windowOpen() { //it takes three parameters, url and name is necessary but properties is not necessary
+            myWindow = window.open("https://www.instagram.com", "myWindow", "height:400px, width: 400px");
+        }
+
+        function promptMethod() { //it takes to arguement one is used to command the user and other is default value
+            var person = prompt("Please enter your name", "Dinesh");
+            document.write("Hello " + person); //it will display hello followed by person text
+        }
+
+        function closeWindow() {
+            myWindow.close();
+        }
+        document.write(window.document.title); //this writes the title in browser which is defined in title element
+
+        function myFunction() {
+            var myWindow = window.open("", "myWindow", "height=350px, width=400px");
+            myWindow.document.write("<p>This is 'myWindow'</p>");
+            myWindow.opener.document.write("<p>This is my source window</p>");
+        }
+    </script>
+</body>
+
+</html>

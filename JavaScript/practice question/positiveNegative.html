@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- wap in js to check from two given integers whether one is postive and another is negative -->
+    <form action="" name="frm">Enter first Number:
+        <input type="text" name="first"><br><br> Enter second Number:
+        <input type="text" name="second"><br><br>
+        <input type="submit" value="Check" onclick="compute()">
+    </form>
+    <script>
+        function compute() {
+            var firstNum = document.frm.first.value;
+            var secondNum = document.frm.second.value;
+            if (firstNum < 0 || secondNum > 0) {
+                document.write("First number is negative and second Number is positive<br>");
+            } else if (firstNum > 0 || secondNum < 0) {
+                document.write("First number is positive and second Number is negative <br>");
+            } else if (firstNum < 0 || secondNum < 0) {
+                document.write("Both number are negative <br>");
+            } else {
+                document.write("Both number are positive <br>");
+            }
+        }
+    </script>
+</body>
+
+</html>

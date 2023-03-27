@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime number</title>
+</head>
+
+<body>
+    <!-- using for loop -->
+    <script type="text/javascript">
+        document.write('The sum of prime numbers between upto 100 is :');
+        var sum = 0;
+        // looping from 1 to 100
+        for (let i = 2; i <= 100; i++) {
+            let flag = 0;
+
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    flag = 1;
+                    break;
+                }
+            }
+
+            // if number greater than 1 and not divisible by other numbers
+            if (flag == 0) {
+                sum += i;
+            }
+        }
+        document.write(sum + "<br>");
+    </script>
+</body>
+
+</html>

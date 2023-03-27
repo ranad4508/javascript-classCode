@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="frm">
+        First Number:
+        <input type="number" name="numOne">
+        <br> Second Number:
+        <input type="number" name="numTwo">
+        <br> Third Number:
+        <input type="number" name="numThree">
+        <br>
+        <input type="submit" name="submit" value="submit" onclick="LargestNum()">
+    </form>
+    <script>
+        function LargestNum() {
+
+            Number1 = document.frm.numOne.value;
+            Number2 = document.frm.numTwo.value;
+            Number3 = document.frm.numThree.value;
+            if (Number1 >= Number2 || Number1 >= Number3) {
+                document.write(Number1 + "is the greatest");
+            }
+            if (Number2 >= Number3 || Number2 >= Number1) {
+                document.write(Number2 + "is the greatest");
+            }
+            if (Number3 >= Number2 || Number3 >= Number1) {
+                document.write(Number3 + "is the greatest");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <form action="" name="frm">
+        Username:
+        <input type="text" name="username"><br> Password: <input type="password" name="password"><br> Phone: <input type="text" name="phone"><br>
+        <input class="submit" type="submit" name="submit" value="Submit" onclick="display()">
+    </form>
+    <script>
+        function display() {
+            var uname = document.frm.username.value;
+            var pass = document.frm.password.value;
+            var phone = document.frm.phone.value;
+            //name validation
+            var aplaExp = /^[a-zA-Z ]+$/;
+            if (!uname.match(aplaExp) || uname == "") {
+                alert("Name must be text");
+                return false;
+            } else {
+                document.write("Name : " + uname + "<br>");
+            }
+            //phone validation
+            var phoneExp = /^98[0-9]{8}$/;
+            if (!phone.match(phoneExp)) {
+                alert("Phone must be of 10 digits and start with 98");
+                return false;
+            } else {
+                document.write("Phone no : " + phone + "<br>");
+            }
+            //password validation
+            if (pass == "" || pass.length < 8) {
+                alert("Password must be of 8 characters");
+                return false;
+            } else {
+                document.write("Password : " + pass + "<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo {
+            height: 500px;
+            width: 500px;
+            /* background-color: aquamarine; */
+            right: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="demo" onmousemove="backgroundChange()" onmouseout="original()"></div> -->
+    <img src="./blog02.jpg" onmousemove="backgroundChange()" onmouseout="original()" id="demo">
+    <script>
+        function backgroundChange() {
+            document.getElementById("demo").src = "./coding.jpg";
+        }
+
+        function original() {
+            document.getElementById("demo").src = "./blog02.jpg";
+        }
+    </script>
+    <!-- question-1: change image of background using mouse event -->
+</body>
+
+</html>

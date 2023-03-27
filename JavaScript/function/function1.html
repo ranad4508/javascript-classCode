@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // with parameters
+        function sum(a, b) {
+            return a + b;
+        }
+        document.write("The sum is " + sum(2, 3));
+
+        // return statement
+        function sum(a = 5, b = 7) {
+            return a + b;
+        }
+        var result = sum();
+        document.write("<br>The result of sum is " + result);
+
+        //without parameters
+        function difference() {
+            var num1 = 12;
+            var num2 = 11;
+            var diff = num1 - num2;
+            document.write("<br>The difference is " + diff);
+
+        }
+        difference();
+
+        //function call with default values in arguement
+        function multiplication(a = 2, b = 4) {
+            var mul = a * b;
+            document.write("<br>The Multiplication is " + mul);
+
+        }
+        multiplication();
+    </script>
+</body>
+
+</html>

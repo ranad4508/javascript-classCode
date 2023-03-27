@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" name="frm">
+        Username:
+        <input type="text" name="username"><br> Password: <input type="password" name="password"><br> Phone: <input type="text" name="phone"><br>
+        <select name="program" id="">
+            <option value="0">Select one option </option>
+            <option value="1">BCA </option>
+            <option value="2">BIM </option>
+            <option value="3"> BBA</option>
+            <option value="4"> CSIT</option>
+        </select>
+        <br> Gender:
+        <input type="radio" value="Male" name="gender"> Male
+        <input type="radio" value="Female" name="gender">Female
+        <input type="radio" value="others" name="gender">Others
+        <br> Language:
+        <input type="checkbox" name="language" value="Nepali">Nepali
+        <input type="checkbox" name="language" value="English">English
+        <input type="checkbox" name="language" value="French">French
+        <br>Date of Birth: <input type="text" name="dob"><br> Email: <input type="text" name="email"><br>
+
+        <input type="submit" name="submit" value="Submit" onclick="display()">
+    </form>
+    <script>
+        function display() {
+            var name = document.frm.username.value;
+            var pwd = document.frm.password.value;
+            var phone = document.frm.phone.value;
+            var program = document.frm.program.value;
+            var gender = document.frm.gender.value;
+            var lang = document.getElementsByName("language");
+            var dob = document.frm.dob.value;
+            var group = document.frm.gender;
+            var email = document.frm.email.value;
+
+            //validation for name 
+            var nameExp = /^[a-zA-Z ]+$/;
+            if (!name.match(nameExp) || name == "") {
+                alert("Name should only contain characters");
+                return false;
+            } else {
+                document.write("Name : " + name + "<br>");
+            }
+
+            //validation for password
+            if (pwd == "" || pwd.length < 8) {
+                alert("Password must be 8 characters");
+                return false;
+            } else {
+                document.write("Password : " + pwd + "<br>");
+            }
+
+            //validation for phone
+            phoneExp = /^01[0-9]{6}$/;
+            if (!phone.match(phoneExp)) {
+                alert("Phone should be at least 8 character");
+                return false;
+            } else {
+                document.write("Phone : " + phone + "<br>");
+            }
+
+            //validation for select
+            if (program == 0) {
+                alert("Choose any program");
+                return false;
+            } else {
+                document.write("Program : " + program + "<br>");
+            }
+
+            //validation for date
+            dateExp = /^(0[0-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-2])-\d{4}/;
+            if (!dob.match(dateExp) || dob == "") {
+                alert("Please follow mm-dd-yyyy pattern");
+                return false;
+            } else {
+                document.write("Date : " + dob + "<br>");
+            }
+
+            //validation for radio
+            for (var i = 0; i < group.length; i++) {
+                if (group[i].checked) {
+                    genderCheck = group[i].value;
+                    break;
+                }
+            }
+            if (i == group.length) {
+                alert("No radio button is selected");
+                return false;
+            } else {
+                document.write("Gender : " + genderCheck + "<br>");
+            }
+
+            //validation for email
+            var mailFormat = /^\w+([\.]?\w+)*@\w+([\.]?\w+)*(\.\w{2,4})+$/;
+            if (!email.match(mailFormat)) {
+                alert("Please write proper email address");
+                return false;
+            } else {
+                document.write("Email : " + email + "<br>");
+            }
+
+            //validation for checkbox
+            var statusText = "";
+            for (var index = 0; index < lang.length; index++) {
+                statusText = statusText + lang[index].value + "-" + lang[index].checked + "<br>";
+                // alert(statusText);
+            }
+            document.write("Language : " + statusText + "<br>");
+
+
+            /*
+            regular expression
+            [] any one charater betn the brackets
+            [^..] any one character not between the brackets
+            [0-9] or \d it matches any decimal digit from 0 through 9
+            \w any character betn [a-zA-Z0-9_]
+            */
+
+
+            /*
+            Quantifiers
+            p+ it matches any string containing one or more p's
+            p* it matches any string containing zero or more p's
+            p? it matches any string containing at most one (zero or one) p
+            p{N} it matches any string containing a sequence of N or size p's
+            p{2,3} it matches any string containing a sequence of two or three p's
+            p{2,} it matches any string containing a sequence of at least two p's
+            p$ it matches any string with p at the end of it.
+            ^p it matches any string with p at the beginning of it
+            */
+
+
+            // document.write(name + "<br>" + pwd + "<br>" + gender + "<br>" + language + "<br>" + dob)
+        }
+    </script>
+</body>
+
+</html>

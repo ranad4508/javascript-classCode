@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="frm">
+        <!-- wap in js to convert celcius temperature to fahrenheit : formuls=> c/5=(f-32)/9  -->
+        Enter celcius<input type="text" name="celcius"><br>
+        <input type="submit" value="Calculate" onclick="temperature()">
+    </form>
+    <script>
+        function temperature() {
+            var celcius = document.frm.celcius.value;
+            var farhen = parseFloat((celcius * 1.8) + 32);
+            document.write("Temperature in fahrenheit is : " + farhen);
+        }
+    </script>
+</body>
+
+</html>

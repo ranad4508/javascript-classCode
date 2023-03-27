@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="frmLogin">
+        <input type="text" name="username" id="user">
+        <input type="password" name="password" id="pass">
+        <input type="submit" name="submit" onclick="display()">
+
+    </form>
+    <script>
+        function display() {
+            //using name 
+            var name = document.frmLogin.username.value;
+            var pwd = document.frmLogin.password.value;
+            document.write("Username : " + name + "<br>Password : " + pwd);
+
+            //using getElementById
+            var name1 = document.getElementById('user').value;
+            var pwd1 = document.getElementById('pass').value;
+            document.write("Username : " + name1 + "<br>Password : " + pwd1);
+        }
+    </script>
+</body>
+
+</html>

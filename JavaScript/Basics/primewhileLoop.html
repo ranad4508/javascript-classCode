@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var i = 2;
+
+        var sum = 0;
+        while (i <= 100) {
+            var j = 2;
+            while (j < i - 1) {
+                if (j % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+                j++;
+            }
+            if (isPrime) {
+                sum += i;
+            }
+            isPrime = true;
+            i++;
+        }
+        document.write("Sum of prime numbers is: " + sum);
+    </script>
+</body>
+
+</html>

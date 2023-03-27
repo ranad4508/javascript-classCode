@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- wap in js to find sum of two numbers using form -->
+    <form action="" method="get" name="frm">
+        Enter first Number :
+        <input type="text" name="firstNum"><br> Enter second Number :
+        <input type="text" name="secondNum"><br>
+        <input type="submit" value="Calculate" name="submit" onclick="display()">
+    </form>
+    <script>
+        function display() {
+            var first = document.frm.firstNum.value;
+            var second = document.frm.secondNum.value;
+            var add = parseInt(first) + parseInt(second);
+            document.write("Sum of two number is : " + add);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- wap in js to read min and max number from user and find sum of all even numbers between 
+    those two numbers -->
+    <form action="" name="frm">
+        Enter minimum number:
+        <input type="text" name="minimum"><br>
+        <label for="max">Enter maximum number</label>
+        <input type="text" name="maximum"><br>
+        <input type="submit" name="Calculate" onclick="display()">
+    </form>
+    <script>
+        function display() {
+            var min = document.frm.minimum.value;
+            var max = document.frm.maximum.value;
+            var sum = 0;
+            var i;
+            for (i = min; i <= max; i++) {
+                if (i % 2 == 0) {
+                    sum = sum + i;
+                }
+            }
+            document.write("Sum of all even number between min and max is " + sum);
+        }
+    </script>
+</body>
+
+</html>

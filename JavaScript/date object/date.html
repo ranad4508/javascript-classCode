@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var date = new Date();
+        var date1 = new Date(2022, 11, 24, 10, 33, 30, 0);
+
+
+        //using string inside date constructor
+        var date1 = new Date(" Sat Dec 24 2022 10:33:30");
+
+        document.write(date1 + "<br>"); //it display the whole date string
+
+        date1.setTime(579837583799);
+        document.write(date1);
+
+        var date = new Date();
+
+
+        document.write("getDate : " + date.getDate() + "<br>");
+        document.write("getDay : " + date.getDay() + "<br>");
+        document.write("getFullYear : " + date.getFullYear() + "<br>");
+        document.write("<br>getHours : " + date.getHours() + "<br>");
+        document.write("getMilliseconds : " + date.getMilliseconds() + "<br>");
+        document.write("getMinutes : " + date.getMinutes() + "<br>");
+        document.write("getMonth : " + date.getMonth() + "<br>");
+        document.write("getSeconds : " + date.getSeconds() + "<br>");
+
+        //get time start from jan 1 1970 mid night
+        document.write("getTime : " + date.getTime() + "<br>");
+
+        var d = new Date();
+        document.write("Locale String " + d.toLocaleString() + "<br>");
+    </script>
+</body>
+
+</html>

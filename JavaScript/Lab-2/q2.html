@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="frm">
+        Enter 1st Number:
+        <input type="text" name="first" id=""><br> Enter 2nd Number:
+        <input type="text" name="second"><br>
+        <input type="submit" value="Add" onclick="addition()">
+        <input type="submit" value="Subtract" onclick="subtraction()">
+        <input type="submit" value="Multiply" onclick="multiplication()">
+        <input type="submit" value="Divide" onclick="division()">
+        <input type="submit" value="Average" onclick="Average()">
+    </form>
+    <script>
+        function addition() {
+            var num1 = document.frm.first.value;
+            var num2 = document.frm.second.value;
+            document.write("Addition: " + parseInt(num1) + parseInt(num2));
+        }
+
+        function subtraction() {
+            var num1 = document.frm.first.value;
+            var num2 = document.frm.second.value;
+            document.write("Subtraction: " + parseInt(num1) - parseInt(num2));
+        }
+
+        function multiplication() {
+            var num1 = document.frm.first.value;
+            var num2 = document.frm.second.value;
+            document.write("Multiplication: " + parseInt(num1) * parseInt(num2));
+        }
+
+        function division() {
+            var num1 = document.frm.first.value;
+            var num2 = document.frm.second.value;
+            document.write("Division: " + parseInt(num1) / parseInt(num2));
+        }
+
+        function Average() {
+            var num1 = document.frm.first.value;
+            var num2 = document.frm.second.value;
+            document.write("Average: " + (parseInt(num1) + parseInt(num2)) / 2);
+        }
+    </script>
+</body>
+
+</html>

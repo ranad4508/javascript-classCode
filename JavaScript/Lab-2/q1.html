@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="frm">
+        Enter a number:
+        <input type="text" name="number" id=""><br>
+        <input type="submit" value="Check" onclick="primeNumber()">
+    </form>
+    <script>
+        function primeNumber() {
+            var num = document.frm.number.value;
+            var i, chk = 0;
+            for (i = 2; i < num; i++) {
+                if (num % 2 == 0) {
+                    chk++;
+                    break;
+                }
+            }
+            if (chk == 0)
+                document.write(num + " is a Prime Number");
+            else
+                document.write(num + " is not a Prime Number");
+        }
+    </script>
+</body>
+
+</html>

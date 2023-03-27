@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- wap in js to find whether the number given by user is prime or not -->
+    <form action="" name="frm">
+        Enter number:
+        <input type="text" name="number"><br>
+        <input type="submit" value="Check" onclick="prime()">
+    </form>
+    <script>
+        function prime() {
+            var n = document.frm.number.value;
+            var i;
+            var flag = 0;
+            if (n == 0 || n == 1) {
+                flag = 1;
+            }
+            for (i = 2; i <= n / 2; ++i) {
+                if (n % i == 0) {
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                document.write(n + " is prime number");
+            } else {
+                document.write(n + " is not a prime number");
+            }
+        }
+    </script>
+</body>
+
+</html>
