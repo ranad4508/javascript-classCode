@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="frm">
+        Username:
+        <input type="text" name="name"><br> Password:
+        <input type="password" name="password"><br> Confirm Password:
+        <input type="password" name="cpassword"><br> Phone: <input type="text" name="phone"><br> Email: <input type="text" name="email"><br> Date of Birth: <input type="text" name="dob"> <br> Gender:
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female <br>
+        <input type="submit" value="Submit" onclick="display()">
+
+    </form>
+    <script type="text/javascript">
+        function display() {
+
+            var name = document.frm.name.value;
+            var password = document.frm.password.value;
+            var cpassword = document.frm.cpassword.value;
+            var phone = document.frm.phone.value;
+            var dob = document.frm.dob.value;
+            var email = document.frm.email.value;
+            var group = document.frm.gender;
+
+            if (name == "" || name.length < 8) {
+                alert("Name must be text and of 8 character");
+                return false;
+            } else {
+                document.write("Name : " + name + "<br>");
+            }
+
+            if (password == "" || password.length < 8) {
+                alert("Password must be of 8 characters");
+                return false;
+            } else {
+                document.write("Password : " + password + "<br>");
+            }
+
+            if (cpassword == password || cpassword != "") {
+                document.write("Confirm password: " + cpassword + "<br>");
+            } else {
+                document.write("Confirm password does not match with password");
+            }
+
+            var phoneExp = /^98[0-9]{8}$/;
+            if (!phone.match(phoneExp)) {
+                alert("Phone must be of 10 digits and start with 98");
+                return false;
+            } else {
+                document.write("Phone no : " + phone + "<br>");
+            }
+
+            var mailFormat = /^\w+([\.]?\w+)*@\w+([\.]?\w+)*(\.\w{2,4})+$/;
+            if (!email.match(mailFormat)) {
+                alert("Please write proper email address");
+                return false;
+            } else {
+                document.write("Email : " + email + "<br>");
+            }
+
+            dateExp = /^\d{4}-(0[1-9]|[12][0-9]|3[0-2])-(0[0-9]|1[0-2])/;
+            if (!dob.match(dateExp) || dob == "") {
+                alert("Please follow yyyy-mm-dd pattern");
+                return false;
+            } else {
+                document.write("Date : " + dob + "<br>");
+            }
+
+            for (var i = 0; i < group.length; i++) {
+                if (group[i].checked) {
+                    genderCheck = group[i].value;
+                    break;
+                }
+            }
+            if (i == group.length) {
+                alert("No radio button is selected");
+                return false;
+            } else {
+                document.write("Gender : " + genderCheck + "<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>
