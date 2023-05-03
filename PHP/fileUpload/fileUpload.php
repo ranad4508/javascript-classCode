@@ -59,7 +59,7 @@
         else {
             if (move_uploaded_file($_FILES['fileupload']['tmp_name'], $target_file)) {
                 echo "The file" . basename($_FILES['fileupload']['name']) . " has been successfully uploaded";
-                // $sql = "INSERT into payment()";
+    
             } else {
                 echo "Sorry, there was an error";
             }
