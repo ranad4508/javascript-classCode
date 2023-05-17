@@ -14,19 +14,6 @@
         <input type="submit" value="Upload" name="submit">
     </form>
     <?php
-    // for insert into database
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $db_name = "BCA_Fourth";
-    
-    $conn = new mysqli($servername, $username, $password, $db_name);
-    
-    if($conn->connect_error){
-        die("Connection failed: ".$conn->connect_error);
-    }
-    // for insert into database
-
     if (isset($_POST['submit'])) {
         $target_dir = "./upload/";
         $target_file = $target_dir . basename($_FILES['fileupload']['name']);
