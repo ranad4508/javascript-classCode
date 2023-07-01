@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        p{
+        /* p{
             color: red;
         }
         body{
@@ -22,18 +22,18 @@
             color: #fff;
             background-color: purple;
 
-        }
+        } */
     </style>
     <script src="./Library/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
             $(".hide-btn").click(function(){
                 $("p.very-fast").hide("fast");
-                $("p.slow").hide(5000);
+                // $("p.slow").hide(5000);
             });
             $(".show-btn").click(function(){
                 $("p.very-fast").show(50);
-                $("p.slow").show(5000);
+                // $("p.slow").show(5000);
             });
         });
     </script>
@@ -46,7 +46,7 @@
         Show paragraphs
     </button>
     <p class="very-fast">This paragraph will show/hide with very fast speed.</p>
-    <p class="slow">This paragraph will show/hide with slow speed.</p>
+    <!-- <p class="slow">This paragraph will show/hide with slow speed.</p> -->
     
 </body>
 </html>

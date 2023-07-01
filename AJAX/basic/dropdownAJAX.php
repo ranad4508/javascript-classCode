@@ -47,7 +47,7 @@ $result = $conn->query($query) or die('Query Failed');
         <option value="0">Please select </option>
         <?php
         while ($row = $result->fetch_assoc()) {
-            echo '<option value="' . $row['sid'] . '">' . $row['sname'] . '</option>';
+            echo '<option value="' . $row['id'] . '">' . $row['username'] . '</option>';
         }
         ?>
     </select>

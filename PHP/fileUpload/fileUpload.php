@@ -33,10 +33,10 @@
         }
 
         //allow certain file formats
-        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
-            echo "Sorry, only JPG, JPEG, PNG and GIF files are only allowed";
-            $fileuploadOk = 0;
-        }
+        // if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+        //     echo "Sorry, only JPG, JPEG, PNG and GIF files are only allowed";
+        //     $fileuploadOk = 0;
+        // }
         //check if $fileuploadOk is set to 0 by an error
     
         if ($fileuploadOk == 0) {

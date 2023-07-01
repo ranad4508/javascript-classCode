@@ -11,20 +11,18 @@ if($conn->connect_errno !=0){
     die('Could not select database');
 }
 
-$sql = "SELECT * from student where sid='".$q."'";
+$sql = "SELECT * from student where id='".$q."'";
 $result = mysqli_query($conn, $sql);
 echo "<table> 
 <tr>
 <th>Name </th>
 <th>Address</th>
-<th>Phone</th>
 </tr>
 ";
 while($row = mysqli_fetch_array($result)){
-    echo "<tr?>";
-    echo "<td>".$row['sname']."</td>";
-    echo "<td>".$row['saddress']."</td>";
-    echo "<td>".$row['phone']."</td>";
+    echo "<tr>";
+    echo "<td>".$row['username']."</td>";
+    echo "<td>".$row['address']."</td>";
     echo "</tr>";
 }
 ?>

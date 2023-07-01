@@ -5,7 +5,7 @@
 		//$lastname = $_POST['lastname'];
 		//$email = $_POST['email'];
 		//$image="";
-		$target_dir = "binfourthb/";
+		$target_dir = "upload/";
 		$a = $_FILES["image"]["name"];
 		$target_file = $target_dir . $a;
 		if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
@@ -19,12 +19,12 @@
 		}
 		else{
 		// Create connection
-		$conn=mysqli_connect('localhost','root','','shikha');
+		$conn=mysqli_connect('localhost','root','','bca_fourth');
 		// Check connection
 		if (!$conn) {
     	die("Connection failed: ".mysqli_connect_errno() );
 			}
-		$sql = "INSERT INTO myguests(firstname,lastname,email,image)
+		$sql = "INSERT INTO student(firstname,lastname,email,image)
 		VALUES ('$firstname', '$lastname','$email','$a')";
 		if (mysqli_query($conn, $sql)) {
     		echo "New record created successfully";
